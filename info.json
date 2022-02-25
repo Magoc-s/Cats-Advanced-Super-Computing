@@ -3,6 +3,9 @@
      "version": "0.0.1",
      "title": "Cat's Advanced Super Computing",
      "author": "Cat",
+     "contact": "julcros02@gmail.com",
+     "description": "Add new high-performance computing technologies and research trees. Report issues via github issues.",
+     "homepage": "https://github.com/Magoc-s/Cats-Advanced-Super-Computing",
      "factorio_version": "1.1",
-     "dependencies": []
+     "dependencies": ["base >= 1.1"]
 }

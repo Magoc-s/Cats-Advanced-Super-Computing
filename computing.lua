@@ -1,19 +1,6 @@
 --computing.lua
-
-local function config(name)
-    return settings.startup['cat:asc-'..name].value
-end
-
-local function sprite(name)
-    return '__cats-advanced-super-computing__/sprite/'..name
-end
-
-local function sound(name)
-    return '__cats-advanced-super-computing__/sound/'..name
-end
-
-local base_sounds = require("__base__/prototypes/entity/sounds")
-
+require("default-vars")
+require("default-funcs")
 -- computing items
 data:extend({
     { -- item subgroup for all computer items.
@@ -160,5 +147,9 @@ data:extend{
             module_slots = 3,
             module_info_icon_shift = {0, 0.9}
         }
+
+        --https://github.com/lossycrypt/eradicators-hand-crank-generator/blob/master/data.lua#L275
+        circuit_wire_max_distance     = default_circuit_wire_max_distance,
+        default_output_signal = {type='item', name='cat:small-compute-node'},
     }
 }
