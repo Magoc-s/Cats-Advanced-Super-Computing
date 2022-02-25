@@ -2,6 +2,7 @@
 
 require("default-vars")
 require("default-funcs")
-require("computing")
-require("cooling")
-require("cat-technologies")
+require("prototypes.collections.computing")
+require("prototypes.collections.cooling")
+require("prototypes.cat-technologies")
+require("prototypes.cat-fluids")
