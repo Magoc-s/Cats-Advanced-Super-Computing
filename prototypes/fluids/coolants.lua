@@ -1,4 +1,4 @@
--- cat-fluids.lua
+-- coolants.lua
 require("default-vars")
 require("default-funcs")
 
@@ -18,7 +18,7 @@ data:extend({
     {
         type = "fluid",
         name = "compute-coolant-water",
-        default_temperature = 15,
+        default_temperature = 22,
         max_temperature = 100,
         heat_capacity = "0.2KJ",
         base_color = {r=0, g=0.34, b=0.6},
