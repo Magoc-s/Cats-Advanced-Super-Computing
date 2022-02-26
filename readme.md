@@ -51,9 +51,9 @@ Can be added to compute nodes for flat bonuses at a flat increase to energy cost
     * Active VRM Cooler
         - 100, 200, 300 Fin variants
     * Carbon VRM Addon
-        - 10, 6, 2 nanometre variants
-    * Optical Null-Leak VRMs
-        - single, multi, fully-embedded layer variants
+        - 2, 6, 10 times SC density variants
+    * Multi-layered Carbon VRMs
+        - 1, 2, 3 additional layers variants
 
 
 **Coolants**

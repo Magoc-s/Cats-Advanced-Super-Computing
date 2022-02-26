@@ -1,17 +1,17 @@
 -- local-funcs.lua
-local function config(name)
+function config(name)
     return settings.startup['cat:asc-'..name].value
 end
 
-local function sprite(name)
+function sprite(name)
     return '__cats-advanced-super-computing__/sprite/'..name
 end
 
-local function sound(name)
+function sound(name)
     return '__cats-advanced-super-computing__/sound/'..name
 end
 
-local function ventgraphic(name)
+function ventgraphic(name)
     return '__cats-advanced-super-computing__/graphics/entity/vent-covers/'..name
 end
 
