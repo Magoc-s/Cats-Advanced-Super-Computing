@@ -138,3 +138,22 @@ Coolers are the modular structures used to cool coolant.
     * probably tier these buildings too
     * probably should result in scrap products too
 
+
+**Research Ideas**
+- Assembling Machine Productivity/Efficiency/Speed (like +1% per research level but its a super computer so once its up and running, is only consuming power to research)
+- Same for chemical plants, oil refineries
+- Inserter Speed
+- Space Science Yield per Rocket Launch
+- Solar Panel Energy Generation Efficiency
+- Battery/Accumulator Storage and Discharge Bonus's
+- Stone/Steel Furnace fuel efficiency
+- Boiler Efficiency
+- Robot Energy Efficiency
+- Power Armour Energy Generation Productivity
+- Exo-skeleton performance
+- Radar range and speed, 
+- probably upgrades for buildings implemented by the mod
+- things like roboport recharge speed, roboport recharging platforms, robot energy efficiency
+- perhaps even things like power pole cable range (not power area of influence, just the distance between two connecting poles)
+- we could split recharge speed into two things - raw increase in speed, but it also wastes power (kind of like wireless chargers do) and then a wireless charging efficiency bonus
+- and then we could also have a power armour equipment that wirelessly draws power from the power grid if you are inside the area of influence
