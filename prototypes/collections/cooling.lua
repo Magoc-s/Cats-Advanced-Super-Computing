@@ -99,37 +99,36 @@ data:extend({
 data:extend{
     {
         type      = 'offshore-pump',
-        name      = 'cat:small-swamp-cooler-ent',
+        name      = 'cat:small-blower-cooler-ent',
         flags     = {'placeable-neutral', 'player-creation'},
-        icon      = sprite 'small-swamp-cooler.png',
+        icon      = sprite 'small-blower-cooler.png',
         icon_size = 64,
         collision_mask = { "object-layer", "train-layer" }, -- collide just with object-layer and train-layer which don't collide with water, this allows us to build on 1 tile wide ground
         center_collision_mask = { "water-tile", "object-layer", "player-layer" }, -- to test that tile directly under the pump is ground
     
         minable = {
             mining_time = 0.1,
-            result      = 'cat:small-swamp-cooler'
+            result      = 'cat:small-blower-cooler'
         }
 
         max_health = 200,
         corpse     = 'small-remnants',
         fluid      = 'compute-coolant-air',
 
-        -- ADD fluid_box
-        -- fluid_box = {
-        --     base_area = 1,
-        --     base_level = 1,
-        --     pipe_covers = pipecoverspictures(),
-        --     production_type = "output",
-        --     filter = "water",
-        --     pipe_connections =
-        --     {
-        --         {
-        --         position = {0, 1},
-        --         type = "output"
-        --         }
-        --     }
-        -- },
+        fluid_box = {
+            base_area = 1,
+            base_level = 1,
+            pipe_covers = ventcoverspictures(),
+            production_type = "output",
+            filter = "compute-coolant-air",
+            pipe_connections =
+            {
+                {position = {0, 1}, type = "output"},
+                {position = {0, -1},type = "output"},
+                {position = {1, 0}, type = "output"},
+                {position = {-1, 0},type = "output"}
+            }
+        },
         collision_box = {{-0.4,-0.4},{0.4,0.4}},
         selection_box = {{-0.4,-0.4},{0.4,0.4}},
 
