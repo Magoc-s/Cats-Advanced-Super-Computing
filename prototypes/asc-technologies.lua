@@ -1,6 +1,7 @@
 -- cat-technologies.lua
 require("default-vars")
 require("default-funcs")
+local tech_collections = require("asc-technologies-collections")
 
 -- all advanced super computing technologies.
 -- TODO: Balance this. Probably really bad.
@@ -13,18 +14,7 @@ data:extend({
 
     prerequisites = {"advanced-electronics-2"},
     -- TODO: add remaining small scale computing recipes here :)
-    effects = {
-        { type = 'unlock-recipe',
-          recipe = 'cat:small-compute-node-rec'
-        },
-        { type = 'unlock-recipe',
-            recipe = 'cat:small-swamp-cooler-rec'
-        },
-        { type = 'unlock-recipe',
-            recipe = 'cat:small-blower-cooler-rec'
-        },
-    },
-
+    effects = tech_collections.small_scale_computing_unlocks()
     unit = {
         count       = 300,
         ingredients = {

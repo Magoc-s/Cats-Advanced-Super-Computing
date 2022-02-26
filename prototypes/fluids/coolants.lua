@@ -14,6 +14,7 @@ data:extend({
         icon = sprite 'compute-coolant-air.png',
         icon_size = 64, icon_mipmaps = 4,
         order = "cat[fluid]-air"
+        auto_barrel = false
     },
     {
         type = "fluid",
@@ -26,6 +27,7 @@ data:extend({
         icon = sprite 'compute-coolant-water.png',
         icon_size = 64, icon_mipmaps = 4,
         order = "cat[fluid]-water"
+        auto_barrel = false
     },
     {
         type = "fluid",
@@ -39,5 +41,6 @@ data:extend({
         icon = sprite 'compute-coolant-ln2.png',
         icon_size = 64, icon_mipmaps = 4,
         order = "cat[fluid]-water"
+        auto_barrel = false
     },
 })

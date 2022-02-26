@@ -11,13 +11,13 @@ data:extend({
     },
     { -- small compute node item
         type        = 'item'
-        name        = 'cat:small-compute-node',
+        name        = 'asc:small-compute-node',
         icon        = sprite 'small-compute-node.png',
         icon_size   = 64,
         subgroup    = 'computing',
         order       = 'a1'. -- appear first in g (computing) row.
 
-        place_result = 'cat:small-compute-node-ent',
+        place_result = 'asc:small-compute-node-ent',
         stack_size   = 50,
     }
 })
@@ -27,7 +27,7 @@ data:extend({
 data:extend({
     {
         type = 'recipe',
-        name = 'cat:small-compute-node-rec',
+        name = 'asc:small-compute-node-rec',
         -- Normal reciple
         normal = {
             enabled     = false,
@@ -39,7 +39,7 @@ data:extend({
                 {'iron-plate',          4},
             },
 
-            result          = 'cat:small-compute-node',
+            result          = 'asc:small-compute-node',
             energy_required = 15,
         },
         -- Marathon recipe, pls dont use this.
@@ -54,7 +54,7 @@ data:extend({
                 {'iron-plate',          6},
             },
 
-            result          = 'cat:small-compute-node',
+            result          = 'asc:small-compute-node',
             energy_required = 25,
         },
 
@@ -64,7 +64,7 @@ data:extend({
 -- computing research technologies
 -- TODO: Balance this. Probably really bad.
 data:extend({
-    name = 'cat:small-scale-computing',
+    name = 'asc:small-scale-computing',
     type = 'technology',
 
     icon      = sprite 'small-scale-computing-technology.png',
@@ -74,7 +74,7 @@ data:extend({
 
     effects = {
         { type = 'unlock-recipe',
-          recipe = 'cat:small-compute-node-rec'
+          recipe = 'asc:small-compute-node-rec'
           -- TODO: add remaining small scale computing recipes here :)
         },
     },
@@ -88,7 +88,7 @@ data:extend({
         },
         time = 30,
     },
-    order = "cat-c1",
+    order = "asc-c1",
 })
 
 local small_compute_node_inputs = {
@@ -111,45 +111,3 @@ local large_compute_node_inputs = {
 }
 -- computing research placable entities
 -- TODO everything bruh
-data:extend{
-    {
-        type      = 'lab',
-        name      = 'cat:small-compute-node-ent',
-        flags     = {'placeable-neutral', 'player-creation'},
-        icon      = sprite 'small-compute-node.png',
-        icon_size = 64,
-
-        minable = {
-            mining_time = 0.5,
-            result      = 'cat:small-compute-node'
-        }
-
-        max_health = 200,
-        corpse     = 'small-remnants',
-
-        collision_box = {{-0.7,-0.7},{0.7,0.7}},
-        selection_box = {{-0.7,-1.2},{0.7,0.7}},
-
-        vehicle_impact_sound = base_sounds['generic_impact'],
-        open_sound           = base_sounds['machine_open'],
-        close_sound          = base_sounds['machine_close'],
-
-        energy_source = {
-            type           = "electric",
-            usage_priority = "secondary-input"
-        },
-
-        energy_usage      = "20kW",
-        researching_speed = 1,
-        inputs            = small_compute_node_inputs,
-
-        module_specification = {
-            module_slots = 3,
-            module_info_icon_shift = {0, 0.9}
-        }
-
-        --https://github.com/lossycrypt/eradicators-hand-crank-generator/blob/master/data.lua#L275
-        circuit_wire_max_distance     = default_circuit_wire_max_distance,
-        default_output_signal = {type='item', name='cat:small-compute-node'},
-    }
-}

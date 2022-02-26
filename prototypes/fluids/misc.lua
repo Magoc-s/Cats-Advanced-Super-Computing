@@ -12,6 +12,7 @@ data:extend({
         icon = sprite 'compute-data.png',
         icon_size = 64, icon_mipmaps = 4,
         order = "asc[misc-fluids]-compute-data"
+        auto_barrel = false
     },
     {
         type = "fluid",
@@ -24,6 +25,7 @@ data:extend({
         icon = sprite 'atmospheric-nitrogen',
         icon_size = 64, icon_mipmaps = 4,
         order = "asc[misc-fluids]-atmospheric-nitrogen"
+        auto_barrel = false
     },
     {
         type = "fluid",

@@ -7,6 +7,10 @@ function sprite(name)
     return '__cats-advanced-super-computing__/sprite/'..name
 end
 
+function ent_sprite(name)
+  return sprite('entity/') .. name 
+end
+
 function sound(name)
     return '__cats-advanced-super-computing__/sound/'..name
 end
