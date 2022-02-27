@@ -11,23 +11,23 @@ data:extend({
         order = "e"
     },
     { -- small compute node item
-        type        = 'item'
+        type        = 'item',
         name        = 'cat:small-swamp-cooler',
         icon        = sprite 'small-swamp-cooler.png',
         icon_size   = 64,
         subgroup    = 'cooling',
-        order       = 'a11'. -- appear first in g (computing) row.
+        order       = 'a11', -- appear first in g (computing) row.
 
         place_result = 'cat:small-swamp-cooler-ent',
         stack_size   = 50,
-    }
+    },
     { -- small compute node item
-        type        = 'item'
+        type        = 'item',
         name        = 'cat:small-blower-cooler',
         icon        = sprite 'small-blower-cooler.png',
         icon_size   = 64,
         subgroup    = 'cooling',
-        order       = 'a12'. -- appear first in g (computing) row.
+        order       = 'a12', -- appear first in g (computing) row.
 
         place_result = 'cat:small-blower-cooler-ent',
         stack_size   = 50,
@@ -66,7 +66,7 @@ data:extend({
             result          = 'cat:small-swamp-cooler',
             energy_required = 10,
         },
-    }
+    },
     {
         type = 'recipe',
         name = 'cat:small-blower-cooler-rec',
@@ -96,7 +96,7 @@ data:extend({
     }
 })
 
-data:extend{
+data:extend({
     {
         type      = 'offshore-pump',
         name      = 'cat:small-blower-cooler-ent',
@@ -109,7 +109,7 @@ data:extend{
         minable = {
             mining_time = 0.1,
             result      = 'cat:small-blower-cooler'
-        }
+        },
 
         max_health = 200,
         corpse     = 'small-remnants',
@@ -132,9 +132,9 @@ data:extend{
         collision_box = {{-0.4,-0.4},{0.4,0.4}},
         selection_box = {{-0.4,-0.4},{0.4,0.4}},
 
-        vehicle_impact_sound = base_sounds['generic_impact'],
-        open_sound           = base_sounds['machine_open'],
-        close_sound          = base_sounds['machine_close'],
+        -- vehicle_impact_sound = base_sounds['generic_impact'],
+        -- open_sound           = base_sounds['machine_open'],
+        -- close_sound          = base_sounds['machine_close'],
 
         pumping_speed = 1,
         tile_width = 1,
@@ -146,5 +146,6 @@ data:extend{
         },
 
         energy_usage      = "5kW",
+        graphics_set      = 
     }
-}
+})

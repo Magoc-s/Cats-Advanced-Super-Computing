@@ -10,12 +10,12 @@ data:extend({
         order = "g"
     },
     { -- small compute node item
-        type        = 'item'
+        type        = 'item',
         name        = 'asc:small-compute-node',
         icon        = sprite 'small-compute-node.png',
         icon_size   = 64,
         subgroup    = 'computing',
-        order       = 'a1'. -- appear first in g (computing) row.
+        order       = 'a1', -- appear first in g (computing) row.
 
         place_result = 'asc:small-compute-node-ent',
         stack_size   = 50,
@@ -64,31 +64,33 @@ data:extend({
 -- computing research technologies
 -- TODO: Balance this. Probably really bad.
 data:extend({
-    name = 'asc:small-scale-computing',
-    type = 'technology',
+    {
+        name = 'asc:small-scale-computing',
+        type = 'technology',
 
-    icon      = sprite 'small-scale-computing-technology.png',
-    icon_size = 128,
+        icon      = sprite 'small-scale-computing-technology.png',
+        icon_size = 128,
 
-    prerequisites = {"advanced-electronics-2"},
+        prerequisites = {"advanced-electronics-2"},
 
-    effects = {
-        { type = 'unlock-recipe',
-          recipe = 'asc:small-compute-node-rec'
-          -- TODO: add remaining small scale computing recipes here :)
+        effects = {
+            { type = 'unlock-recipe',
+              recipe = 'asc:small-compute-node-rec',
+              -- TODO: add remaining small scale computing recipes here :)
+            },
         },
-    },
 
-    unit = {
-        count       = 300,
-        ingredients = {
-            {"automation-science-pack", 1},
-            {"logistic-science-pack",   1},
-            {"chemical-science-pack",   1},
+        unit = {
+            count       = 300,
+            ingredients = {
+                {"automation-science-pack", 1},
+                {"logistic-science-pack",   1},
+                {"chemical-science-pack",   1},
+            },
+            time = 30,
         },
-        time = 30,
-    },
-    order = "asc-c1",
+        order = "asc-c1",
+    }
 })
 
 local small_compute_node_inputs = {
@@ -107,7 +109,7 @@ local large_compute_node_inputs = {
     "compute-coolant-ln2",
     "compute-network-data",
     "compute-network-packets",
-    "compute-network-bulk"
+    "compute-network-bulk",
 }
 -- computing research placable entities
 -- TODO everything bruh

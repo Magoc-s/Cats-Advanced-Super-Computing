@@ -5,7 +5,7 @@ require("module-specs")
 
 -- CPUS
 for index, value in ipairs(n_core_cpu_core_counts) do 
-    data:extend(
+    data:extend({
         {
             type = "module",
             name = tostring(value) .. "-core-processing-cpu",
@@ -19,17 +19,17 @@ for index, value in ipairs(n_core_cpu_core_counts) do
             stack_size = 50,
             effect =
             {
-              speed = {bonus = value * 0.01}
+              speed = {bonus = value * 0.01},
               consumption = {bonus = 0.05 * value},
             },
             limitation = asc_compute_module_limitation(),
             limitation_message_key = "asc-compute-modules-only-useable-in-compute-nodes"
         },
-    )
+    })
 end
 
 for index, value in ipairs(data_proc_accel_unit_counts) do 
-    data:extend(
+    data:extend({
         {
             type = "module",
             name = tostring(value) .. "-cu-acceleration-unit",
@@ -43,17 +43,17 @@ for index, value in ipairs(data_proc_accel_unit_counts) do
             stack_size = 50,
             effect =
             {
-              speed = {bonus = value * 0.006}
+              speed = {bonus = value * 0.006},
               consumption = {bonus = 0.03 * value},
             },
             limitation = asc_compute_module_limitation(),
             limitation_message_key = "asc-compute-modules-only-useable-in-compute-nodes"
         },
-    )
+    })
 end
 
 for index, value in ipairs(quantum_compute_unit_counts) do 
-    data:extend(
+    data:extend({
         {
             type = "module",
             name = tostring(value) .. "-core-quantum-chip",
@@ -67,13 +67,13 @@ for index, value in ipairs(quantum_compute_unit_counts) do
             stack_size = 50,
             effect =
             {
-              speed = {bonus = value * 0.85}
+              speed = {bonus = value * 0.85},
               consumption = {bonus = 1.5 * value},
             },
             limitation = asc_compute_module_limitation(),
             limitation_message_key = "asc-compute-modules-only-useable-in-compute-nodes"
         },
-    )
+    })
 end
 -- END CPUS
 
@@ -83,7 +83,7 @@ end
 
 -- Memory
 for index, value in ipairs(dram_mem_module_counts) do 
-    data:extend(
+    data:extend({
         {
             type = "module",
             name = tostring(value) .. "-dram-chip-mem-module",
@@ -102,11 +102,11 @@ for index, value in ipairs(dram_mem_module_counts) do
             limitation = asc_compute_module_limitation(),
             limitation_message_key = "asc-compute-modules-only-useable-in-compute-nodes"
         },
-    )
+    })
 end
 
 for index, value in ipairs(hbmx_cache_module_counts) do 
-    data:extend(
+    data:extend({
         {
             type = "module",
             name = tostring(value) .. "-die-hbmx-cache-module",
@@ -125,11 +125,11 @@ for index, value in ipairs(hbmx_cache_module_counts) do
             limitation = asc_compute_module_limitation(),
             limitation_message_key = "asc-compute-modules-only-useable-in-compute-nodes"
         },
-    )
+    })
 end
 
 for index, value in ipairs(crystal_mem_module_counts) do 
-    data:extend(
+    data:extend({
         {
             type = "module",
             name = tostring(value) .. "d-layered-crystal-memory-module",
@@ -148,7 +148,7 @@ for index, value in ipairs(crystal_mem_module_counts) do
             limitation = asc_compute_module_limitation(),
             limitation_message_key = "asc-compute-modules-only-useable-in-compute-nodes"
         },
-    )
+    })
 end
 -- END Memory
 

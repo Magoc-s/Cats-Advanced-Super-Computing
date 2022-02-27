@@ -37,7 +37,7 @@ function ventcoverspictures()
       },
       south =
       {
-        filename = ventgraphic "vent-cover-south.png",,
+        filename = ventgraphic "vent-cover-south.png",
         priority = "extra-high",
         width = 46,
         height = 52
