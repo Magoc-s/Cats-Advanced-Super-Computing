@@ -10,5 +10,10 @@ data:extend({
         type = "recipe-category",
         name = default_vars.mod_prefix .. 'computer-science',
         order = "asc:recipe-category-z"
+    },
+    {
+        type = "recipe-category",
+        name = default_vars.mod_prefix .. 'computer-cooling',
+        order = "asc:recipe-category-y"
     }
 })
