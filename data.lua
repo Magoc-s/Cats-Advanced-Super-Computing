@@ -4,6 +4,9 @@
 require("default-vars")
 require("default-funcs")
 -- Items, Recipes, Entities TODO: split these files into corresponding thingies
+require("prototypes.recipe.coolant-air")
+require("prototypes.recipe.compute-data")
+require("prototypes.entities.asc-entities")
 require("prototypes.collections.computing")
 require("prototypes.collections.cooling")
 -- Technology trees
