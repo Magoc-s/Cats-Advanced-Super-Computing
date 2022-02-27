@@ -15,7 +15,7 @@ data:extend({
             ingredients = {},
             results = {
                 {type = 'fluid', name = default_vars.mod_prefix .. 'compute-coolant-air', amount = 5, temperature = 22}
-            }
+            },
             energy_required = 1,
         },
     },
@@ -40,7 +40,7 @@ data:extend({
             results = {
                 {type = 'fluid', name = default_vars.mod_prefix .. 'compute-coolant-air', amount = 10, temperature = 16, fluidbox_index = 1},
                 {type = 'fluid', name = 'water', amount = 100, temperature = 45, catalyst_amount = 100, fluidbox_index = 3}
-            }
+            },
             energy_required = 1,
         },
     },
@@ -56,7 +56,7 @@ data:extend({
             ingredients = {},
             results = {
                 {type = 'fluid', name = default_vars.mod_prefix .. 'compute-coolant-air', amount = 15, temperature = 12, fluidbox_index = 1}
-            }
+            },
             energy_required = 1,
         },
     }

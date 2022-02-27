@@ -22,7 +22,7 @@ data:extend({
                     fluidbox_index = 1
                 }
             },
-            results = {{type = 'fluid', name = default_vars.mod_prefix .. 'compute-data', amount = 1, fluidbox_index = 2}}
+            results = {{type = 'fluid', name = default_vars.mod_prefix .. 'compute-data', amount = 1, fluidbox_index = 2}},
             energy_required = 5,
         },
     },
@@ -49,7 +49,7 @@ data:extend({
             results = {
                 {type = 'fluid', name = default_vars.mod_prefix .. 'compute-data', amount = 2, fluidbox_index = 2},
                 {type = 'fluid', name = default_vars.mod_prefix .. 'compute-coolant-water', amount = 10, temperature = 65, fluidbox_index = 3, catalyst_amount = 10}
-            }
+            },
             energy_required = 5,
         },
     }

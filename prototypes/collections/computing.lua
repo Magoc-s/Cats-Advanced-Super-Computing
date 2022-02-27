@@ -1,6 +1,6 @@
 --computing.lua
-require("default-vars")
-require("default-funcs")
+local default_vars  = require("default-vars")
+local default_funcs = require("default-funcs")
 -- computing items
 data:extend({
     { -- item subgroup for all computer items.
@@ -11,13 +11,13 @@ data:extend({
     },
     { -- small compute node item
         type        = 'item',
-        name        = 'asc:small-compute-node',
-        icon        = sprite 'small-compute-node.png',
+        name        = default_vars.mod_prefix .. 'small-compute-node',
+        icon        = default_funcs.sprite 'small-compute-node.png',
         icon_size   = 64,
         subgroup    = 'computing',
         order       = 'a1', -- appear first in g (computing) row.
 
-        place_result = 'asc:small-compute-node-ent',
+        place_result = default_vars.mod_prefix .. 'small-compute-node',
         stack_size   = 50,
     }
 })
@@ -27,7 +27,7 @@ data:extend({
 data:extend({
     {
         type = 'recipe',
-        name = 'asc:small-compute-node-rec',
+        name = default_vars.mod_prefix .. 'small-compute-node',
         -- Normal reciple
         normal = {
             enabled     = false,
@@ -39,7 +39,7 @@ data:extend({
                 {'iron-plate',          4},
             },
 
-            result          = 'asc:small-compute-node',
+            result          = default_vars.mod_prefix .. 'small-compute-node',
             energy_required = 15,
         },
         -- Marathon recipe, pls dont use this.
@@ -54,7 +54,7 @@ data:extend({
                 {'iron-plate',          6},
             },
 
-            result          = 'asc:small-compute-node',
+            result          = default_vars.mod_prefix .. 'small-compute-node',
             energy_required = 25,
         },
 
@@ -65,17 +65,17 @@ data:extend({
 -- TODO: Balance this. Probably really bad.
 data:extend({
     {
-        name = 'asc:small-scale-computing',
+        name = default_vars.mod_prefix .. 'small-scale-computing',
         type = 'technology',
 
-        icon      = sprite 'small-scale-computing-technology.png',
+        icon      = default_funcs.sprite 'small-scale-computing-technology.png',
         icon_size = 128,
 
         prerequisites = {"advanced-electronics-2"},
 
         effects = {
             { type = 'unlock-recipe',
-              recipe = 'asc:small-compute-node-rec',
+              recipe = default_vars.mod_prefix .. 'small-compute-node',
               -- TODO: add remaining small scale computing recipes here :)
             },
         },

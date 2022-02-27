@@ -1,6 +1,6 @@
 -- cooling.lua
-require("default-vars")
-require("default-funcs")
+local default_vars  = require("default-vars")
+local default_funcs = require("default-funcs")
 
 -- cooling items
 data:extend({
@@ -10,26 +10,26 @@ data:extend({
         group = "production",
         order = "e"
     },
-    { -- small compute node item
+    { -- small swamp cooler item
         type        = 'item',
-        name        = 'cat:small-swamp-cooler',
-        icon        = sprite 'small-swamp-cooler.png',
+        name        = default_vars.mod_prefix .. 'small-swamp-cooler',
+        icon        = default_funcs.sprite 'small-swamp-cooler.png',
         icon_size   = 64,
         subgroup    = 'cooling',
         order       = 'a11', -- appear first in g (computing) row.
 
-        place_result = 'cat:small-swamp-cooler-ent',
+        place_result = default_vars.mod_prefix .. 'small-swamp-cooler',
         stack_size   = 50,
     },
-    { -- small compute node item
+    { -- small blower cooler item
         type        = 'item',
-        name        = 'cat:small-blower-cooler',
-        icon        = sprite 'small-blower-cooler.png',
+        name        = default_vars.mod_prefix .. 'small-blower-cooler',
+        icon        = default_funcs.sprite 'small-blower-cooler.png',
         icon_size   = 64,
         subgroup    = 'cooling',
         order       = 'a12', -- appear first in g (computing) row.
 
-        place_result = 'cat:small-blower-cooler-ent',
+        place_result = default_vars.mod_prefix .. 'small-blower-cooler',
         stack_size   = 50,
     }
 })
@@ -39,7 +39,7 @@ data:extend({
 data:extend({
     {
         type = 'recipe',
-        name = 'cat:small-swamp-cooler-rec',
+        name = default_vars.mod_prefix .. 'small-swamp-cooler',
         -- Normal reciple
         normal = {
             enabled     = false,
@@ -49,7 +49,7 @@ data:extend({
                 {'iron-gear-wheel',      2},
                 {'iron-plate',           6},
             },
-            result          = 'cat:small-swamp-cooler',
+            result          = default_vars.mod_prefix .. 'small-swamp-cooler',
             energy_required = 5,
         },
         -- Marathon recipe, pls dont use this.
@@ -63,13 +63,13 @@ data:extend({
                 {'iron-plate',          10},
             },
 
-            result          = 'cat:small-swamp-cooler',
+            result          = default_vars.mod_prefix .. 'small-swamp-cooler',
             energy_required = 10,
         },
     },
     {
         type = 'recipe',
-        name = 'cat:small-blower-cooler-rec',
+        name = default_vars.mod_prefix .. 'small-blower-cooler',
         -- Normal reciple
         normal = {
             enabled     = false,
@@ -78,7 +78,7 @@ data:extend({
                 {'iron-gear-wheel',      2},
                 {'iron-plate',           6},
             },
-            result          = 'cat:small-blower-cooler',
+            result          = default_vars.mod_prefix .. 'small-blower-cooler',
             energy_required = 3,
         },
         -- Marathon recipe, pls dont use this.
@@ -90,7 +90,7 @@ data:extend({
                 {'iron-plate',          10},
             },
 
-            result          = 'cat:small-blower-cooler',
+            result          = default_vars.mod_prefix .. 'small-blower-cooler',
             energy_required = 6,
         },
     }
@@ -99,26 +99,26 @@ data:extend({
 data:extend({
     {
         type      = 'offshore-pump',
-        name      = 'cat:small-blower-cooler-ent',
+        name      = default_vars.mod_prefix .. 'small-blower-cooler',
         flags     = {'placeable-neutral', 'player-creation'},
-        icon      = sprite 'small-blower-cooler.png',
+        icon      = default_funcs.sprite 'small-blower-cooler.png',
         icon_size = 64,
         collision_mask = { "object-layer", "train-layer" }, -- collide just with object-layer and train-layer which don't collide with water, this allows us to build on 1 tile wide ground
         center_collision_mask = { "water-tile", "object-layer", "player-layer" }, -- to test that tile directly under the pump is ground
     
         minable = {
             mining_time = 0.1,
-            result      = 'cat:small-blower-cooler'
+            result      = default_vars.mod_prefix .. 'small-blower-cooler'
         },
 
         max_health = 200,
         corpse     = 'small-remnants',
-        fluid      = 'compute-coolant-air',
+        fluid      = default_vars.mod_prefix .. 'compute-coolant-air',
 
         fluid_box = {
             base_area = 1,
             base_level = 1,
-            pipe_covers = ventcoverspictures(),
+            pipe_covers = default_funcs.ventcoverspictures(),
             production_type = "output",
             filter = "compute-coolant-air",
             pipe_connections =
@@ -146,6 +146,12 @@ data:extend({
         },
 
         energy_usage      = "5kW",
-        graphics_set      = 
+        graphics_set = {
+            animation = {
+                filename = "__cats-advanced-super-computing__/graphics/entity/small-blower-cooler.png",
+                width    = 50,
+                height   = 50
+            }
+        }
     }
 })

@@ -1,4 +1,5 @@
 -- misc.lua (for other 'fluids')
+local default_funcs = require("default-funcs")
 
 data:extend({
     {
@@ -9,7 +10,7 @@ data:extend({
         heat_capacity = "0.1KJ",
         base_color = {r=0, g=0.34, b=0.6},
         flow_color = {r=0.7, g=0.7, b=0.7},
-        icon = sprite 'compute-data.png',
+        icon = default_funcs.sprite 'compute-data.png',
         icon_size = 64, icon_mipmaps = 4,
         order = "asc[misc-fluids]-compute-data",
         auto_barrel = false
@@ -22,7 +23,7 @@ data:extend({
         heat_capacity = "0.6KJ",
         base_color = {r=0, g=0.34, b=0.6},
         flow_color = {r=0.7, g=0.7, b=0.7},
-        icon = sprite 'atmospheric-nitrogen',
+        icon = default_funcs.sprite 'atmospheric-nitrogen',
         icon_size = 64, icon_mipmaps = 4,
         order = "asc[misc-fluids]-atmospheric-nitrogen",
         auto_barrel = false
@@ -35,7 +36,7 @@ data:extend({
         heat_capacity = "0.2KJ",
         base_color = {r=0, g=0.34, b=0.6},
         flow_color = {r=0.7, g=0.7, b=0.7},
-        icon = sprite 'filtered-water',
+        icon = default_funcs.sprite 'filtered-water',
         icon_size = 64, icon_mipmaps = 4,
         order = "asc[misc-fluids]-filtered-water"
     },
