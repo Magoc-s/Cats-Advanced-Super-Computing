@@ -1,10 +1,11 @@
 -- misc.lua (for other 'fluids')
 local default_funcs = require("default-funcs")
+local default_vars = require("default-vars")
 
 data:extend({
     {
         type = "fluid",
-        name = "compute-data",
+        name = default_vars.mod_prefix .. "compute-data",
         default_temperature = 32,
         max_temperature = 64,
         heat_capacity = "0.1KJ",
@@ -17,7 +18,7 @@ data:extend({
     },
     {
         type = "fluid",
-        name = "atmospheric-nitrogen",
+        name = default_vars.mod_prefix .. "atmospheric-nitrogen",
         default_temperature = 22,
         max_temperature = 80,
         heat_capacity = "0.6KJ",
@@ -30,7 +31,7 @@ data:extend({
     },
     {
         type = "fluid",
-        name = "filtered-water",
+        name = default_vars.mod_prefix .. "filtered-water",
         default_temperature = 22,
         max_temperature = 105,
         heat_capacity = "0.2KJ",
