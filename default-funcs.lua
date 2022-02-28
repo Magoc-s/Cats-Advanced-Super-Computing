@@ -5,7 +5,7 @@ function default_funcs.config(name)
 end
 
 function default_funcs.sprite(name)
-    return '__cats-advanced-super-computing__/sprite/'..name
+    return '__advanced-super-computing__/sprite/'..name
 end
 
 function default_funcs.ent_sprite(name)
@@ -13,11 +13,11 @@ function default_funcs.ent_sprite(name)
 end
 
 function default_funcs.sound(name)
-    return '__cats-advanced-super-computing__/sound/'..name
+    return '__advanced-super-computing__/sound/'..name
 end
 
 function default_funcs.ventgraphic(name)
-    return '__cats-advanced-super-computing__/graphics/entity/vent-covers/'..name
+    return '__advanced-super-computing__/graphics/entity/vent-covers/'..name
 end
 
 function default_funcs.ventcoverspictures()
