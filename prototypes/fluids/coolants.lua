@@ -6,7 +6,7 @@ data:extend({
     {
         type = "fluid",
         name = default_vars.mod_prefix .. "compute-coolant-air",
-        default_temperature = 21,
+        default_temperature = 10,
         max_temperature = 105,
         heat_capacity = "0.1KJ",
         base_color = {r=0.9, g=0.9, b=0.9},

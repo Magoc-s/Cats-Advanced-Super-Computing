@@ -148,7 +148,7 @@ data:extend({
         energy_usage      = "5kW",
         graphics_set = {
             animation = {
-                filename = "__cats-advanced-super-computing__/graphics/entity/small-blower-cooler.png",
+                filename = "__advanced-super-computing__/graphics/entity/small-blower-cooler.png",
                 width    = 50,
                 height   = 50
             }

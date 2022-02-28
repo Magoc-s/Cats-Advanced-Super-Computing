@@ -6,11 +6,11 @@ data:extend({
     {
         type = 'recipe',
         name = default_vars.mod_prefix .. 'compute-coolant-air-blower',
+        category = default_vars.mod_prefix .. 'computer-cooling',
         normal = {
             enabled = false,
             hidden  = true,
             hide_from_player_crafting = true,
-            category = 'computer-cooling',
             main_product = default_vars.mod_prefix .. 'compute-coolant-air',
             ingredients = {},
             results = {
@@ -22,11 +22,11 @@ data:extend({
     {
         type = 'recipe',
         name = default_vars.mod_prefix .. 'compute-coolant-air-swamp',
+        category = default_vars.mod_prefix .. 'computer-cooling',
         normal = {
             enabled = false,
             hidden  = true,
             hide_from_player_crafting = true,
-            category = 'computer-cooling',
             main_product = default_vars.mod_prefix .. 'compute-coolant-air',
             ingredients = {{
                 type = 'fluid', 
@@ -47,11 +47,11 @@ data:extend({
     {
         type = 'recipe',
         name = default_vars.mod_prefix .. 'compute-coolant-air-condenser',
+        category = default_vars.mod_prefix .. 'computer-cooling',
         normal = {
             enabled = false,
             hidden  = true,
             hide_from_player_crafting = true,
-            category = 'computer-cooling',
             main_product = default_vars.mod_prefix .. 'compute-coolant-air',
             ingredients = {},
             results = {

@@ -6,11 +6,11 @@ data:extend({
     {   -- Recipe for compute-data produced by small-compute-nodes, input COLD air
         type = 'recipe',
         name = default_vars.mod_prefix .. 'compute-data',
+        category = default_vars.mod_prefix .. 'computer-science',
         normal = {
             enabled = false,
             hidden  = true,
             hide_from_player_crafting = true,
-            category = 'computer-science',
             main_product = default_vars.mod_prefix .. 'compute-data',
             ingredients = {
                 {
@@ -29,11 +29,11 @@ data:extend({
     {   -- Recipe for compute-data produced by small-compute-nodes, input COLD air
         type = 'recipe',
         name = default_vars.mod_prefix .. 'compute-data-water',
+        category = default_vars.mod_prefix .. 'computer-science',
         normal = {
             enabled = false,
             hidden  = true,
             hide_from_player_crafting = true,
-            category = 'computer-science',
             main_product = default_vars.mod_prefix .. 'compute-data',
             ingredients = {
                 {
@@ -62,7 +62,7 @@ data:extend({
 --             enabled = false,
 --             --hidden  = true,
 --             hide_from_player_crafting = true,
---             category = 'computer-science',
+--             category = default_vars.mod_prefix .. 'computer-science',
 --             main_product = default_vars.mod_prefix .. 'compute-data',
 --             ingredients = {
 --                 {
