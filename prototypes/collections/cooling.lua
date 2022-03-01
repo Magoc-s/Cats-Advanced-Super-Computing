@@ -13,7 +13,7 @@ data:extend({
     { -- small swamp cooler item
         type        = 'item',
         name        = default_vars.mod_prefix .. 'small-swamp-cooler',
-        icon        = default_funcs.sprite 'small-swamp-cooler.png',
+        icon        = default_funcs.ent_sprite 'small-swamp-cooler.png',
         icon_size   = 64,
         subgroup    = 'cooling',
         order       = 'a11', -- appear first in g (computing) row.
@@ -24,7 +24,7 @@ data:extend({
     { -- small blower cooler item
         type        = 'item',
         name        = default_vars.mod_prefix .. 'small-blower-cooler',
-        icon        = default_funcs.sprite 'small-blower-cooler.png',
+        icon        = default_funcs.ent_sprite 'small-blower-cooler.png',
         icon_size   = 64,
         subgroup    = 'cooling',
         order       = 'a12', -- appear first in g (computing) row.
@@ -101,7 +101,7 @@ data:extend({
         type      = 'offshore-pump',
         name      = default_vars.mod_prefix .. 'small-blower-cooler',
         flags     = {'placeable-neutral', 'player-creation'},
-        icon      = default_funcs.sprite 'small-blower-cooler.png',
+        icon      = default_funcs.ent_sprite 'small-blower-cooler.png',
         icon_size = 64,
         collision_mask = { "object-layer", "train-layer" }, -- collide just with object-layer and train-layer which don't collide with water, this allows us to build on 1 tile wide ground
         center_collision_mask = { "water-tile", "object-layer", "player-layer" }, -- to test that tile directly under the pump is ground

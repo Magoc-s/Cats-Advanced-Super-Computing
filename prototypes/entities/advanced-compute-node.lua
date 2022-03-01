@@ -8,7 +8,7 @@ data:extend{
         type      = 'assembling-machine',
         name      = default_vars.mod_prefix .. 'advanced-compute-node',
         flags     = default_vars.default_flags,
-        icon      = default_funcs.ent_sprite 'advanced-compute-node',
+        icon      = default_funcs.ent_sprite 'advanced-compute-node.png',
         icon_size = 64,
 
         minable = {

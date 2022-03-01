@@ -12,7 +12,7 @@ data:extend({
     { -- small compute node item
         type        = 'item',
         name        = default_vars.mod_prefix .. 'small-compute-node',
-        icon        = default_funcs.sprite 'small-compute-node.png',
+        icon        = default_funcs.ent_sprite 'small-compute-node.png',
         icon_size   = 64,
         subgroup    = 'computing',
         order       = 'a1', -- appear first in g (computing) row.
