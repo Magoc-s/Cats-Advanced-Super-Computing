@@ -86,4 +86,30 @@ ent_fluid_boxes.small_swamp_cooler = {
     filter = default_vars.mod_prefix .. "compute-coolant-air"
   }
 }
+
+ent_fluid_boxes.quantum_compute_node = { -- TODO align fluid boxes with bigger size of quantum node
+  {
+    production_type = "input",
+    --pipe_picture = pipe_pics,
+    pipe_covers = default_funcs.ventcoverspictures(),
+    base_area  = 2,
+    height     = 1,
+    base_level = 1,
+    pipe_connections = {{ type="input", position = {1.8, 1} }},
+    secondary_draw_orders = { north = -1 },
+    filter = default_vars.mod_prefix .. "compute-coolant-ln2"
+  },
+  {
+    production_type = "output",
+    --pipe_picture = pipe_pics,
+    pipe_covers = default_funcs.ventcoverspictures(),
+    base_area  = 2,
+    height     = 1,
+    base_level = 1,
+    pipe_connections = {{ type="output", position = {0.5, 2} }},
+    secondary_draw_orders = { north = -1 },
+    filter = default_vars.mod_prefix .. "compute-coolant-ln2"
+  }
+}
+
 return ent_fluid_boxes

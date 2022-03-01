@@ -59,9 +59,9 @@ data:extend{
 
         energy_source = {type = "electric", usage_priority = "secondary-input"},
         energy_consumption  = "20kW",
-        module_specification = {module_slots = 4, module_info_icon_shift = {0, 0.9}},
+        module_specification = {module_slots = 0, module_info_icon_shift = {0, 0.9}},
         -- Limiting usable modules happens in control stage. Factorio engine doesn't allow restricting by mod category! (as of 2019?)
-        allowed_effects = {"speed", "productivity", "consumption", "pollution"},
+        allowed_effects = {},
         target_temperature = 10
     }
 }

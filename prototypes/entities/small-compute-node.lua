@@ -46,7 +46,7 @@ data:extend{
         crafting_categories = {"crafting"},
         crafting_speed   = 1,
         ingredient_count = 0, -- ingredient_count doesn't include fluids!
-        --crafting_categories = {"computer-science"}
-        fixed_recipe     = default_vars.mod_prefix .. "compute-data"
+        crafting_categories = {"computer-science"}
+        -- fixed_recipe     = default_vars.mod_prefix .. "compute-data"
     }
 }
