@@ -9,7 +9,7 @@ data:extend{
         type      = 'boiler',
         name      = default_vars.mod_prefix .. 'small-swamp-cooler',
         flags     = default_vars.default_flags,
-        icon      = default_funcs.ent_sprite 'small-swamp-cooler',
+        icon      = default_funcs.ent_sprite 'small-swamp-cooler.png',
         icon_size = 64,
 
         minable = {
@@ -62,12 +62,6 @@ data:extend{
         module_specification = {module_slots = 4, module_info_icon_shift = {0, 0.9}},
         -- Limiting usable modules happens in control stage. Factorio engine doesn't allow restricting by mod category! (as of 2019?)
         allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-
-        target_temperature = 21,
-        crafting_categories = {default_vars.mod_prefix .. "computer-cooling"},
-        crafting_speed   = 1,
-        ingredient_count = 0, -- ingredient_count doesn't include fluids!
-        --crafting_categories = {"computer-science"}
-        fixed_recipe     = default_vars.mod_prefix .. "compute-coolant-air-swamp"
+        target_temperature = 10
     }
 }

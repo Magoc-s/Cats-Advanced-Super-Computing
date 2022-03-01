@@ -24,7 +24,7 @@ data:extend({
         heat_capacity = "0.6KJ",
         base_color = {r=0, g=0.34, b=0.6},
         flow_color = {r=0.7, g=0.7, b=0.7},
-        icon = default_funcs.sprite 'atmospheric-nitrogen',
+        icon = default_funcs.sprite 'atmospheric-nitrogen.png',
         icon_size = 64, icon_mipmaps = 4,
         order = "asc[misc-fluids]-atmospheric-nitrogen",
         auto_barrel = false
@@ -37,7 +37,7 @@ data:extend({
         heat_capacity = "0.2KJ",
         base_color = {r=0, g=0.34, b=0.6},
         flow_color = {r=0.7, g=0.7, b=0.7},
-        icon = default_funcs.sprite 'filtered-water',
+        icon = default_funcs.sprite 'filtered-water.png',
         icon_size = 64, icon_mipmaps = 4,
         order = "asc[misc-fluids]-filtered-water"
     },

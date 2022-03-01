@@ -1,5 +1,6 @@
 local default_vars    = require("default-vars")
 local default_funcs   = require("default-funcs")
+local entity_funcs    = require("entity-funcs")
 local ent_fluid_boxes = require("entity-fluid-boxes")
 
 -- Small Compute Node
@@ -8,7 +9,7 @@ data:extend{
         type      = 'assembling-machine',
         name      = default_vars.mod_prefix .. 'small-compute-node',
         flags     = default_vars.default_flags,
-        icon      = default_funcs.ent_sprite 'small-compute-node',
+        icon      = default_funcs.ent_sprite 'small-compute-node.png',
         icon_size = 64,
 
         minable = {
