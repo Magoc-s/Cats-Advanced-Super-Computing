@@ -20,8 +20,8 @@ data:extend{
         max_health = 200,
         corpse     = 'small-remnants',
 
-        collision_box = {{-0.7,-0.7},{0.7,0.7}},
-        selection_box = {{-0.7,-0.7},{0.7,0.7}},
+        collision_box = {{-1.2,-1.2},{1.2,1.2}},
+        selection_box = {{-1.2,-1.2},{1.2,1.2}},
 
         fluid_box = ent_fluid_boxes.small_swamp_cooler.fluid_box,
         output_fluid_box = ent_fluid_boxes.small_swamp_cooler.output_fluid_box,

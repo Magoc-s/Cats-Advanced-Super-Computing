@@ -42,7 +42,7 @@ data:extend({
         name = default_vars.mod_prefix .. 'small-swamp-cooler',
         -- Normal reciple
         normal = {
-            enabled     = false,
+            enabled     = true,
             ingredients = {
                 {'pump',                 1},
                 {'electric-engine-unit', 1},

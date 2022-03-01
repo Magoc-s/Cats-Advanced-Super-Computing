@@ -20,8 +20,8 @@ data:extend{
         max_health = 200,
         corpse     = 'small-remnants',
 
-        collision_box = {{-0.7,-0.7},{0.7,0.7}},
-        selection_box = {{-0.7,-0.7},{0.7,0.7}},
+        collision_box = {{-1.2,-1.2},{1.2,1.2}},
+        selection_box = {{-1.2,-1.2},{1.2,1.2}},
         -- fluid boxes must be either "input" or "output" production types
         -- Hacky solution, but it works
         fluid_boxes   = ent_fluid_boxes.small_compute_node,
@@ -29,6 +29,13 @@ data:extend{
         open_sound           = { filename = "__base__/sound/machine-open.ogg",     volume = 0.85 },
         close_sound          = { filename = "__base__/sound/machine-close.ogg",    volume = 0.75 },
         vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+
+        idle_animation = {
+            filename = entity_funcs.asc_entity_graphics "small-compute-node.png",
+            width = 50,
+            height = 50
+        },
+        always_draw_idle_animation = true,
 
         energy_source = {type = "electric", usage_priority = "secondary-input"},
         energy_usage  = "20kW",
