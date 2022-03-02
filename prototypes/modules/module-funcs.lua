@@ -1,7 +1,9 @@
+local default_vars = require("default-vars")
+
 function asc_compute_module_limitation()
     return
           {
-            "compute-data"
+            default_vars.mod_prefix .. "compute-data"
           }
     end
 
