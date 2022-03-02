@@ -62,6 +62,8 @@ data:extend{
         module_specification = {module_slots = 0, module_info_icon_shift = {0, 0.9}},
         -- Limiting usable modules happens in control stage. Factorio engine doesn't allow restricting by mod category! (as of 2019?)
         allowed_effects = {},
-        target_temperature = 10
+        mode = "output-to-separate-pipe",
+        -- Yield is calculated by the power required to HEAT a liquid. Having lower target temp means negative yield! Workaround needed?
+        target_temperature = 50
     }
 }

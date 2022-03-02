@@ -8,8 +8,8 @@ data:extend({
         name = default_vars.mod_prefix .. 'compute-data',
         category = default_vars.mod_prefix .. 'computer-science',
         normal = {
-            enabled = false,
-            hidden  = true,
+            enabled = true,
+            hidden  = false,
             hide_from_player_crafting = true,
             main_product = default_vars.mod_prefix .. 'compute-data',
             ingredients = {
@@ -22,7 +22,7 @@ data:extend({
                     fluidbox_index = 1
                 }
             },
-            results = {{type = 'fluid', name = default_vars.mod_prefix .. 'compute-data', amount = 1, fluidbox_index = 2}},
+            results = {{type = 'fluid', name = default_vars.mod_prefix .. 'compute-data', amount = 1, fluidbox_index = 1}},
             energy_required = 5,
         },
     },

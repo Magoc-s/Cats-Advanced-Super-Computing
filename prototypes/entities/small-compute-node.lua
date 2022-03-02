@@ -42,11 +42,10 @@ data:extend{
         module_specification = {module_slots = 4, module_info_icon_shift = {0, 0.9}},
         -- Limiting usable modules happens in control stage. Factorio engine doesn't allow restricting by mod category! (as of 2019?)
         allowed_effects = {"speed", "productivity", "consumption", "pollution"},
-
-        crafting_categories = {"crafting"},
+        
         crafting_speed   = 1,
         ingredient_count = 0, -- ingredient_count doesn't include fluids!
-        crafting_categories = {"computer-science"}
+        crafting_categories = {default_vars.mod_prefix .. "computer-science"}
         -- fixed_recipe     = default_vars.mod_prefix .. "compute-data"
     }
 }
