@@ -18,7 +18,7 @@ data:extend({
                     name = default_vars.mod_prefix .. 'compute-coolant-air',
                     amount = 5, 
                     minimum_temperature = 11, 
-                    maximum_temperature = 25, 
+                    maximum_temperature = 55,
                     fluidbox_index = 1
                 }
             },
