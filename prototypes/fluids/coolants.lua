@@ -18,6 +18,19 @@ data:extend({
     },
     {
         type = "fluid",
+        name = default_vars.mod_prefix .. "compute-coolant-air-spent",
+        default_temperature = 10,
+        max_temperature = 105,
+        heat_capacity = "0.1KJ",
+        base_color = {r=0.9, g=0.9, b=0.9},
+        flow_color = {r=0.8, g=0.9, b=1.0},
+        icon = default_funcs.sprite 'compute-coolant-air-spent.png',
+        icon_size = 64, icon_mipmaps = 4,
+        order = "cat[fluid]-air",
+        auto_barrel = false
+    },
+    {
+        type = "fluid",
         name = default_vars.mod_prefix .. "compute-coolant-water",
         default_temperature = 22,
         max_temperature = 100,
