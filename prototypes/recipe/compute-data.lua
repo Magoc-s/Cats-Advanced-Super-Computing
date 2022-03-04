@@ -22,7 +22,10 @@ data:extend({
                     fluidbox_index = 1
                 }
             },
-            results = {{type = 'fluid', name = default_vars.mod_prefix .. 'compute-data', amount = 1, fluidbox_index = 1}},
+            results = {
+                {type = 'fluid', name = default_vars.mod_prefix .. 'compute-data', amount = 1, fluidbox_index = 1},
+                {type = 'fluid', name = default_vars.mod_prefix .. 'compute-coolant-air-spent', amount = 1, fluidbox_index = 2}
+            },
             energy_required = 5,
         },
     },
