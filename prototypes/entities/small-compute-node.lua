@@ -20,8 +20,8 @@ data:extend{
         max_health = 200,
         corpse     = 'small-remnants',
 
-        collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
-        selection_box = {{-0.8, -0.8}, {0.8, 0.8}},
+        collision_box = {{-0.7, -1.2}, {0.7, 1.2}},
+        selection_box = {{-0.8, -1.3}, {0.8, 1.3}},
         -- fluid boxes must be either "input" or "output" production types
         -- Hacky solution, but it works
         fluid_boxes   = ent_fluid_boxes.small_compute_node,
