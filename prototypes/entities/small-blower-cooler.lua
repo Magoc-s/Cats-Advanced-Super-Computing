@@ -3,7 +3,7 @@ local default_funcs   = require("default-funcs")
 local entity_funcs    = require("entity-funcs")
 local ent_fluid_boxes = require("entity-fluid-boxes")
 
--- Small Compute Node
+-- Small blower cooler
 data:extend({
   {
     type      = 'assembling-machine',

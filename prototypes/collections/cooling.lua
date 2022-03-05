@@ -21,6 +21,17 @@ data:extend({
         place_result = default_vars.mod_prefix .. 'small-swamp-cooler',
         stack_size   = 50,
     },
+    { -- large swamp cooler item
+        type        = 'item',
+        name        = default_vars.mod_prefix .. 'large-swamp-cooler',
+        icon        = default_funcs.ent_sprite 'large-swamp-cooler.png',
+        icon_size   = 64,
+        subgroup    = 'cooling',
+        order       = 'a11', -- appear first in g (computing) row.
+
+        place_result = default_vars.mod_prefix .. 'large-swamp-cooler',
+        stack_size   = 50,
+    },
     { -- small blower cooler item
         type        = 'item',
         name        = default_vars.mod_prefix .. 'small-blower-cooler',
@@ -30,6 +41,17 @@ data:extend({
         order       = 'a12', -- appear first in g (computing) row.
 
         place_result = default_vars.mod_prefix .. 'small-blower-cooler',
+        stack_size   = 50,
+    },
+    { -- small refridgerated cooler item
+        type        = 'item',
+        name        = default_vars.mod_prefix .. 'small-refridgerated-cooler',
+        icon        = default_funcs.ent_sprite 'small-refridgerated-cooler.png',
+        icon_size   = 64,
+        subgroup    = 'cooling',
+        order       = 'a13', -- appear first in g (computing) row.
+
+        place_result = default_vars.mod_prefix .. 'small-refridgerated-cooler',
         stack_size   = 50,
     }
 })
@@ -67,6 +89,37 @@ data:extend({
             energy_required = 10,
         },
     },
+    -- large swamp cooler
+    {
+        type = 'recipe',
+        name = default_vars.mod_prefix .. 'large-swamp-cooler',
+        -- Normal reciple
+        normal = {
+            enabled     = true,
+            ingredients = {
+                {'pump',                 1},
+                {'electric-engine-unit', 1},
+                {'iron-gear-wheel',      2},
+                {'iron-plate',           6},
+            },
+            result          = default_vars.mod_prefix .. 'large-swamp-cooler',
+            energy_required = 5,
+        },
+        -- Marathon recipe, pls dont use this.
+        expensive = {
+            enabled     = false,
+            ingredients = {
+                {'pump',                 1},
+                {'electric-engine-unit', 1},
+                {'pipe',                 3},
+                {'iron-gear-wheel',      4},
+                {'iron-plate',          10},
+            },
+
+            result          = default_vars.mod_prefix .. 'large-swamp-cooler',
+            energy_required = 10,
+        },
+    },
     {
         type = 'recipe',
         name = default_vars.mod_prefix .. 'small-blower-cooler',
@@ -92,6 +145,33 @@ data:extend({
 
             result          = default_vars.mod_prefix .. 'small-blower-cooler',
             energy_required = 6,
+        },
+    },
+    {
+        type = 'recipe',
+        name = default_vars.mod_prefix .. 'small-refridgerated-cooler',
+        -- Normal recipe
+        normal = {
+            enabled     = true,
+            ingredients = {
+                {'electric-engine-unit', 1},
+                {'iron-gear-wheel',      2},
+                {'iron-plate',           6},
+            },
+            result          = default_vars.mod_prefix .. 'small-refridgerated-cooler',
+            energy_required = 5,
+        },
+        -- Marathon recipe, pls dont use this.
+        expensive = {
+            enabled     = false,
+            ingredients = {
+                {'electric-engine-unit', 1},
+                {'iron-gear-wheel',      4},
+                {'iron-plate',          10},
+            },
+
+            result          = default_vars.mod_prefix .. 'small-refridgerated-cooler',
+            energy_required = 10,
         },
     }
 })

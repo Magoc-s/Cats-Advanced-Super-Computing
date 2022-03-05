@@ -43,6 +43,6 @@ data:extend{
         allowed_effects = {},
         crafting_speed = 1,
         crafting_categories = {default_vars.mod_prefix .. "computer-cooling"},
-        fixed_recipe = default_vars.mod_prefix .. 'compute-coolant-air-swamp'
+        fixed_recipe = default_vars.mod_prefix .. 'compute-coolant-air-swamp-small'
     }
 }

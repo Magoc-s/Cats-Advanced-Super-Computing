@@ -119,6 +119,36 @@ ent_fluid_boxes.small_swamp_cooler = {
   }
 }
 
+ent_fluid_boxes.large_swamp_cooler = {
+  {
+    production_type = "input",
+    base_area = 1,
+    height = 2,
+    base_level = -1,
+    pipe_covers = default_funcs.ventcoverspictures(),
+    pipe_connections =
+    {
+      {type = "input", position = {-2.5, -1.5}},
+      {type = "input", position = {-2.5, 1.5}}
+    },
+    filter = "water"
+  },
+  {
+    production_type = "output",
+    --pipe_picture = pipe_pics,
+    pipe_covers = default_funcs.ventcoverspictures(),
+    base_area  = 1,
+    height     = 1,
+    base_level = 1,
+    pipe_connections = {
+      { type="output", position = {2.5, -1.5} },
+      { type="output", position = {2.5, 1.5} }
+    },
+    secondary_draw_orders = { north = -1 },
+    filter = default_vars.mod_prefix .. "compute-coolant-air"
+  }
+}
+
 ent_fluid_boxes.small_blower_cooler = {
   {
     production_type = "output",
@@ -130,6 +160,22 @@ ent_fluid_boxes.small_blower_cooler = {
     {
       {type = "output", position = {0, -1}},
       {type = "output", position = {0, 1}}
+    },
+    filter = default_vars.mod_prefix .. "compute-coolant-air"
+  }
+}
+
+ent_fluid_boxes.small_refridgerated_cooler = {
+  {
+    production_type = "output",
+    base_area = 1,
+    height = 2,
+    base_level = 1,
+    pipe_covers = default_funcs.ventcoverspictures(),
+    pipe_connections =
+    {
+      {type = "output", position = {0.5, -1.5}},
+      {type = "output", position = {0.5, 1.5}}
     },
     filter = default_vars.mod_prefix .. "compute-coolant-air"
   }
