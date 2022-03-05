@@ -22,8 +22,7 @@ data:extend{
 
         collision_box = {{-0.7, -1.2}, {0.7, 1.2}},
         selection_box = {{-0.8, -1.3}, {0.8, 1.3}},
-        -- fluid boxes must be either "input" or "output" production types
-        -- Hacky solution, but it works
+
         fluid_boxes   = ent_fluid_boxes.small_compute_node,
 
         open_sound           = { filename = "__base__/sound/machine-open.ogg",     volume = 0.85 },

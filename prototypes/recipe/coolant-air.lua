@@ -8,7 +8,7 @@ data:extend({
         name = default_vars.mod_prefix .. 'compute-coolant-air-blower',
         category = default_vars.mod_prefix .. 'computer-cooling',
         normal = {
-            enabled = false,
+            enabled = true,
             hidden  = true,
             hide_from_player_crafting = true,
             main_product = default_vars.mod_prefix .. 'compute-coolant-air',
