@@ -20,6 +20,10 @@ function default_funcs.ventgraphic(name)
     return '__advanced-super-computing__/graphics/entity/vent-covers/'..name
 end
 
+function default_funcs.ent_graphic(name)
+  return '__advanced-super-computing__/graphics/entity/'..name
+end
+
 function default_funcs.ventcoverspictures()
     return {
       north =

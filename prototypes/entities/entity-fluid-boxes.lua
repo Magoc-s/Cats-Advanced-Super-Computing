@@ -181,4 +181,25 @@ ent_fluid_boxes.small_refridgerated_cooler = {
   }
 }
 
+-- Small data bank (aiming for 3x3 entity)
+-------------------------------------------
+-- Standard storage tank
+--   v          position = {-1,-2}
+--  >+-+        position = { 2, 1}
+--   |#|        position = { 1, 2}
+--   +-+<       position = {-2,-1}
+--     ^
+ent_fluid_boxes.small_data_bank = {
+  {
+    base_area = 250,
+    pipe_covers = pipecoverspictures(), -- TODO: make this into some network cable covers pictures
+    pipe_connections =
+    {
+        { position = {-2,-1} },
+        { position = { 2, 1} } }
+    },
+    filter = default_vars.mod_prefix .. "compute-data"
+  }
+}
+
 return ent_fluid_boxes
